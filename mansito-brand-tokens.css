@@ -1,0 +1,192 @@
+/* ============================================
+   BRAND TOKENS — MANSITO CLINIC
+   SOCIAL MEDIA DESIGN SYSTEM
+   Always use these styles. Never substitute.
+   ============================================ */
+
+
+/* --------------------------------------------
+   FONTS — @font-face Declarations
+   -------------------------------------------- */
+
+/* Heading & Section Header — Cormorant Garamond */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url(https://mansitomd.com/wp-content/uploads/elementor/google-fonts/fonts/cormorantgaramond-co3wmx5slcnuhli8bley9mk7whwmhyjyrepjuz-hzho7_w.woff2) format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: auto;
+}
+
+/* Sub-heading, Body, Accent & Buttons — Karla Light */
+@font-face {
+  font-family: 'Karla';
+  src: url(https://mansitomd.com/wp-content/uploads/2024/07/Karla-Light.woff) format('woff'),
+       url(https://mansitomd.com/wp-content/uploads/2024/07/Karla-Light.ttf) format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: auto;
+}
+
+/* Body — Karla Regular */
+@font-face {
+  font-family: 'Karla';
+  src: url(https://mansitomd.com/wp-content/uploads/2024/07/Karla-Light.woff) format('woff'),
+       url(https://mansitomd.com/wp-content/uploads/2024/07/Karla-Light.ttf) format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: auto;
+}
+
+
+/* --------------------------------------------
+   DESIGN TOKENS — CSS Variables
+   -------------------------------------------- */
+
+:root {
+
+  /* --- FONT FAMILIES --- */
+  --font-heading:    'Cormorant Garamond', serif;  /* Headings */
+  --font-subheading: 'Karla', sans-serif;          /* Sub-headings / Subtitles */
+  --font-body:       'Karla', sans-serif;          /* Body Text */
+  --font-section:    'Cormorant Garamond', serif;  /* Section Headers */
+  --font-accent:     'Karla', sans-serif;          /* Accents & Buttons */
+
+  /* --- FONT WEIGHTS --- */
+  --font-weight-heading:    400;
+  --font-weight-subheading: 300;
+  --font-weight-body:       400;
+  --font-weight-section:    400;
+  --font-weight-accent:     300;
+
+  /* --- FONT STYLES --- */
+  --font-style-heading:    normal;
+  --font-style-subheading: normal;
+  --font-style-body:       normal;
+  --font-style-section:    normal;
+  --font-style-accent:     normal;
+
+  /* --- LETTER SPACING --- */
+  --letter-spacing-heading:    1px;
+  --letter-spacing-subheading: 2px;
+  --letter-spacing-body:       1px;
+  --letter-spacing-section:    1px;
+  --letter-spacing-accent:     2px;
+
+  /* --- TEXT TRANSFORM --- */
+  --text-transform-heading:    uppercase;
+  --text-transform-subheading: uppercase;
+  --text-transform-section:    uppercase;
+  --text-transform-accent:     uppercase;
+  --text-transform-body:       none;
+
+  /* --- LINE HEIGHT --- */
+  --line-height-heading:    1.1em;
+  --line-height-subheading: 1.2em;
+  --line-height-section:    1.1em;
+  --line-height-body:       1.4em;
+  --line-height-accent:     1.2em;
+
+  /* --- FONT SIZES --- */
+  /* MINIMUM font size across all designs is 36px — never go below this */
+  --font-size-min:        36px;   /* Absolute minimum — labels, fine print */
+  --font-size-body:       40px;   /* Body text */
+  --font-size-accent:     36px;   /* Accents & buttons */
+  --font-size-section:    44px;   /* Section headers */
+  --font-size-subheading: 52px;   /* Sub-headings */
+  --font-size-heading:    80px;   /* Main headings */
+
+
+  /* --- BACKGROUND COLORS --- */
+  --color-bg-teal-dark:  #4d7272;  /* Dark Teal */
+  --color-bg-cream:      #f2efe8;  /* Cream / Off-white */
+  --color-bg-teal-mid:   #81b6b6;  /* Mid Teal */
+  --color-bg-teal-light: #cee4e3;  /* Light Teal */
+
+  /* --- TEXT COLORS --- */
+  --color-text-cream:      #f2efe8;  /* Cream — on dark teal backgrounds */
+  --color-text-white:      #ffffff;  /* White — on dark or mid teal backgrounds */
+  --color-text-dark:       #3b4441;  /* Dark Green-Gray — on cream or light teal */
+  --color-text-teal-dark:  #4d7272;  /* Dark Teal — on light teal or cream */
+
+}
+
+
+/* --------------------------------------------
+   COLOR COMBINATIONS — Always follow these pairings
+   -------------------------------------------- */
+
+/*
+  bg: #4d7272  →  text: #f2efe8 or #ffffff
+  bg: #f2efe8  →  text: #3b4441
+  bg: #81b6b6  →  text: #ffffff or #4d7272
+  bg: #cee4e3  →  text: #4d7272 or #3b4441
+*/
+
+.bg-teal-dark  { background-color: #4d7272; color: #f2efe8; }
+.bg-cream      { background-color: #f2efe8; color: #3b4441; }
+.bg-teal-mid   { background-color: #81b6b6; color: #ffffff; }
+.bg-teal-light { background-color: #cee4e3; color: #4d7272; }
+
+
+/* --------------------------------------------
+   GLOBAL RULE — Minimum Font Size
+   Never use any font size below 36px in any design.
+   -------------------------------------------- */
+
+* { font-size: max(36px, inherit); }
+
+
+/* --------------------------------------------
+   TYPOGRAPHY ROLES — Ready-to-use classes
+   -------------------------------------------- */
+
+.heading {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-heading);
+  font-weight: var(--font-weight-heading);
+  font-style: var(--font-style-heading);
+  letter-spacing: var(--letter-spacing-heading);
+  text-transform: var(--text-transform-heading);
+  line-height: var(--line-height-heading);
+}
+
+.subheading {
+  font-family: var(--font-subheading);
+  font-size: var(--font-size-subheading);
+  font-weight: var(--font-weight-subheading);
+  font-style: var(--font-style-subheading);
+  letter-spacing: var(--letter-spacing-subheading);
+  text-transform: var(--text-transform-subheading);
+  line-height: var(--line-height-subheading);
+}
+
+.body-text {
+  font-family: var(--font-body);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-body);
+  font-style: var(--font-style-body);
+  letter-spacing: var(--letter-spacing-body);
+  text-transform: var(--text-transform-body);
+  line-height: var(--line-height-body);
+}
+
+.section-header {
+  font-family: var(--font-section);
+  font-size: var(--font-size-section);
+  font-weight: var(--font-weight-section);
+  font-style: var(--font-style-section);
+  letter-spacing: var(--letter-spacing-section);
+  text-transform: var(--text-transform-section);
+  line-height: var(--line-height-section);
+}
+
+.accent, button, .btn {
+  font-family: var(--font-accent);
+  font-size: var(--font-size-accent);
+  font-weight: var(--font-weight-accent);
+  font-style: var(--font-style-accent);
+  letter-spacing: var(--letter-spacing-accent);
+  text-transform: var(--text-transform-accent);
+  line-height: var(--line-height-accent);
+}
